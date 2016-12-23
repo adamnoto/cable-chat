@@ -1,9 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  avatar: MyString
-
-two:
-  name: MyString
-  avatar: MyString
+adam:
+  id: 1
+  name: Adam
+  avatar: adam.jpg
