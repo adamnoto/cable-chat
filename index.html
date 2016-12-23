@@ -69,6 +69,53 @@
           <div class="pane">
             <div class='chatbox'>
               <ul class='chats'>
+                <li class='chat'>
+                  <img class='img-circle media-object pull-left profile-pic' src='public/images/avatar1.jpg'>
+                  <div class='media-body'>
+                    <strong>Adam</strong>
+                    <p>Hello, world!</p>
+                  </div>
+                </li>
+
+                <li class='chat'>
+                  <img class='img-circle media-object pull-left profile-pic' src='public/images/avatar4.jpg'>
+                  <div class='media-body'>
+                    <strong>Christian</strong>
+                    <p>Ayo ntar main FIFA oi!</p>
+                  </div>
+                </li>
+
+                <li class='chat'>
+                  <img class='img-circle media-object pull-left profile-pic' src='public/images/avatar2.jpg'>
+                  <div class='media-body'>
+                    <strong>Wendy</strong>
+                    <p>Ah lu kalah mulu, bosen gue</p>
+                  </div>
+                </li>
+
+                <li class='chat'>
+                  <img class='img-circle media-object pull-left profile-pic' src='public/images/avatar5.jpg'>
+                  <div class='media-body'>
+                    <strong>Barock</strong>
+                    <p>Sad truth :(</p>
+                  </div>
+                </li>
+
+                <li class='chat'>
+                  <img class='img-circle media-object pull-left profile-pic' src='public/images/avatar6.jpg'>
+                  <div class='media-body'>
+                    <strong>Yoseph</strong>
+                    <p>nih biar gak kalaan, gue jual stick ps, 150.000</p>
+                  </div>
+                </li>
+
+                <li class='chat'>
+                  <img class='img-circle media-object pull-left profile-pic' src='public/images/avatar3.jpg'>
+                  <div class='media-body'>
+                    <strong>Vcool</strong>
+                    <p>Gue juga jual memory ps 2, 80.000</p>
+                  </div>
+                </li>
               </ul>
               <div class='chat-input'>
                 <textarea id='chat-input-text' class='form-control'></textarea>
@@ -78,7 +125,16 @@
 
           <style type='text/css'>
             .chatbox { height: 100%; }
-            .chatbox .chats { height: 90%; overflow-x: scroll; }
+            .chatbox .chats {
+              height: 90%;
+              overflow-x: scroll;
+              list-style: none;
+              padding: 0;
+              margin: 0;
+            }
+            .chatbox .chats .chat { padding: 5px 25px; }
+            .chatbox .chats .chat p { margin: 0px; }
+            .chatbox .chats .chat .profile-pic { height: 32px; width: 32px; }
             .chatbox .chat-input { height: 10%; padding: 7px; }
             .chatbox .chat-input #chat-input-text { width: 100%; height: 100%; }
           </style>
