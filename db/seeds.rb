@@ -1,4 +1,15 @@
 [
+  {name: "Adam", avatar: "avatar1.jpg"},
+  {name: "Wendy", avatar: "avatar2.jpg"},
+  {name: "Vcool", avatar: "avatar3.jpg"},
+  {name: "Christian", avatar: "avatar4.jpg"},
+  {name: "Barock", avatar: "avatar5.jpg"},
+  {name: "Yoseph", avatar: "avatar6.jpg"}
+].each do |user|
+  User.create(user)
+end
+
+[
   # sender id akan digunakan untuk me-render avatar, sedangkan text-nya
   # akan digunakan sebagai isi chat
   {text: "Hello world", sender_id: 1},
