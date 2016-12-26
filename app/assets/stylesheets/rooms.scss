@@ -4,7 +4,7 @@
 
 .chatbox { height: 100%; }
 .chatbox .chats {
-  height: 90%;
+  height: 85%;
   overflow-x: scroll;
   list-style: none;
   padding: 0;
@@ -13,5 +13,6 @@
 .chatbox .chats .chat { padding: 5px 25px; }
 .chatbox .chats .chat p { margin: 0px; }
 .chatbox .chats .chat .profile-pic { height: 32px; width: 32px; }
-.chatbox .chat-input { height: 10%; padding: 7px; }
+.chatbox .chat-input { height: 15%; padding: 7px; }
+.chatbox .chat-input form { width: 100%; height: 100%; }
 .chatbox .chat-input #chat-input-text { width: 100%; height: 100%; }
