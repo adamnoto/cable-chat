@@ -8,6 +8,9 @@ class RoomsTextingChannel < ApplicationCable::Channel
   end
 
   def send_message(data)
-    puts "Menerima pesan, params: #{params}, data: #{data}"
+    ChatBroadcasterJob.perform_now(Chat.create(
+      text: data["message"],
+      sender: User.first
+    ))
   end
 end
