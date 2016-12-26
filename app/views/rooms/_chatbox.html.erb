@@ -1,58 +1,15 @@
 <div class='chatbox'>
   <ul class='chats'>
-    <li class='chat'>
-      <%= image_tag "avatar1.jpg",
-         class: "img-circle media-object pull-left profile-pic" %>
-      <div class='media-body'>
-        <strong>Adam</strong>
-        <p>Hello, world!</p>
-      </div>
-    </li>
-
-    <li class='chat'>
-      <%= image_tag "avatar4.jpg",
-         class: "img-circle media-object pull-left profile-pic" %>
-      <div class='media-body'>
-        <strong>Christian</strong>
-        <p>Ayo ntar main FIFA oi!</p>
-      </div>
-    </li>
-
-    <li class='chat'>
-      <%= image_tag "avatar2.jpg",
-         class: "img-circle media-object pull-left profile-pic" %>
-      <div class='media-body'>
-        <strong>Wendy</strong>
-        <p>Ah lu kalah mulu, bosen gue</p>
-      </div>
-    </li>
-
-    <li class='chat'>
-      <%= image_tag "avatar5.jpg",
-         class: "img-circle media-object pull-left profile-pic" %>
-      <div class='media-body'>
-        <strong>Barock</strong>
-        <p>Sad truth :(</p>
-      </div>
-    </li>
-
-    <li class='chat'>
-      <%= image_tag "avatar6.jpg",
-         class: "img-circle media-object pull-left profile-pic" %>
-      <div class='media-body'>
-        <strong>Yoseph</strong>
-        <p>nih biar gak kalaan, gue jual stick ps, 150.000</p>
-      </div>
-    </li>
-
-    <li class='chat'>
-      <%= image_tag "avatar3.jpg",
-         class: "img-circle media-object pull-left profile-pic" %>
-      <div class='media-body'>
-        <strong>Vcool</strong>
-        <p>Gue juga jual memory ps 2, 80.000</p>
-      </div>
-    </li>
+    <% all_chats.each do |chat| %>
+      <li class='chat'>
+        <%= image_tag chat.sender.avatar,
+          class: "img-circle media-object pull-left profile-pic" %>
+        <div class='media-body'>
+          <strong>Adam</strong>
+          <p><%= chat.text %></p>
+        </div>
+      </li>
+    <% end %>
   </ul>
 
   <div class='chat-input'>
