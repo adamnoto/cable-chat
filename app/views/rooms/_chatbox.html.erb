@@ -1,18 +1,13 @@
 <div class='chatbox'>
   <ul class='chats'>
     <% all_chats.each do |chat| %>
-      <li class='chat'>
-        <%= image_tag chat.sender.avatar,
-          class: "img-circle media-object pull-left profile-pic" %>
-        <div class='media-body'>
-          <strong>Adam</strong>
-          <p><%= chat.text %></p>
-        </div>
-      </li>
+      <%= render "chat", chat: chat %>
     <% end %>
   </ul>
 
   <div class='chat-input'>
-    <textarea id='chat-input-text' class='form-control'></textarea>
+    <%= form_for Chat.new do |f| %>
+      <textarea id='chat-input-text' class='form-control'></textarea>
+    <% end %>
   </div>
 </div>
