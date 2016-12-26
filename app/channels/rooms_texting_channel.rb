@@ -6,4 +6,8 @@ class RoomsTextingChannel < ApplicationCable::Channel
   def unsubscribed
     # Any cleanup needed when channel is unsubscribed
   end
+
+  def send_message(data)
+    puts "Menerima pesan, params: #{params}, data: #{data}"
+  end
 end

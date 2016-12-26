@@ -9,5 +9,11 @@ App.roomsTexting = App.cable.subscriptions.create("RoomsTextingChannel", {
 
     received: function(data) {
         // Called when there's incoming data on the websocket for this channel
+    },
+
+    sendMessage: function(message) {
+        return this.perform('send_message', {
+            message: message
+        });
     }
 });
