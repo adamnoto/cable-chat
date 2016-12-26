@@ -8,9 +8,9 @@ class RoomsTextingChannel < ApplicationCable::Channel
   end
 
   def send_message(data)
-    ChatBroadcasterJob.perform_now(Chat.create(
+    Chat.create(
       text: data["message"],
       sender: User.first
-    ))
+    )
   end
 end
