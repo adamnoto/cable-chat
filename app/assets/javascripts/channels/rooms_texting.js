@@ -9,6 +9,7 @@ App.roomsTexting = App.cable.subscriptions.create("RoomsTextingChannel", {
 
     received: function(data) {
         $(".chats").append(data.chat);
+        scrollToBottomOfChats();
     },
 
     sendMessage: function(message) {
@@ -16,4 +17,13 @@ App.roomsTexting = App.cable.subscriptions.create("RoomsTextingChannel", {
             message: message
         });
     }
+});
+
+function scrollToBottomOfChats() {
+    var chatsBox = $(".chats");
+    chatsBox.scrollTop(chatsBox.prop("scrollHeight"));
+}
+
+$(document).ready(function() {
+    scrollToBottomOfChats();
 });
