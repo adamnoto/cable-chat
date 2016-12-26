@@ -5,4 +5,14 @@ class Chat < ApplicationRecord
   after_create_commit { ChatBroadcasterJob.perform_now(self) }
 
   belongs_to :sender, class_name: User
+
+  ITEMABLE_REGEX = /\A.*jual\s+/i
+
+  def itemable?
+    !(text =~ ITEMABLE_REGEX).nil?
+  end
+
+  def items
+    []
+  end
 end
