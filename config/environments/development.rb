@@ -51,4 +51,7 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  ENV['MIDTRANS_CLIENT_KEY'] = 'VT-client-IKktHiy3aRYHljsw'.freeze
+  ENV['MIDTRANS_SERVER_KEY'] = 'VT-server-7CVlR3AJ8Dpkez3k_TeGJQZU'.freeze
 end
