@@ -43,4 +43,12 @@ class Chat < ApplicationRecord
     # berupa hash/dictionary/associative array
     items
   end
+
+  def gross_amount
+    amount = 0
+    items.each do |item|
+      amount += item[:price]
+    end
+    amount
+  end
 end
