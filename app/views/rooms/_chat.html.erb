@@ -4,5 +4,14 @@
   <div class='media-body'>
     <strong>Adam</strong>
     <p><%= chat.text %></p>
+
+    <% if chat.itemable? && chat.items.any? %>
+      <a href="#beli-<%= chat.id %>"
+        data-token=""
+        data-chat-id="<%= chat.id %>"
+        class='buy-chat-items'>
+        Beli
+      </a>
+    <% end %>
   </div>
 </li>
